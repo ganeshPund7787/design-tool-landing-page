@@ -19,6 +19,7 @@ export default function Navbar() {
                             src={LogoImage}
                             alt="Layeser Logo"
                             className="h-9 w-auto md:h-auto"
+                            draggable={false}
                         />
                     </div>
                     <div className="lg:flex justify-center items-center hidden">

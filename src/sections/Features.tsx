@@ -28,10 +28,11 @@ export default function Features() {
                     Where powers meet{" "}
                     <span className="text-lime-400">Simplicity</span>{" "}
                 </h2>
-                <div className="mt-12 grid grid-cols-1 gap-8">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <FeatureCard
                         title="Real-Time Collaboration"
                         description="Work together seamlessly with conflict-free team editing."
+                        className="col-span-2"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className="z-40">
@@ -67,9 +68,11 @@ export default function Features() {
                             </Avatar>
                         </div>
                     </FeatureCard>
+                    
                     <FeatureCard
                         title="Interactive Prototyping"
                         description="Engage your clients with prototypes that react to user actions."
+                        className="col-span-2"
                     >
                         <div className="aspect-video flex justify-center items-center">
                             <p className="text-4xl font-extrabold text-white/20 text-center">
@@ -81,9 +84,11 @@ export default function Features() {
                             </p>
                         </div>
                     </FeatureCard>
+                    
                     <FeatureCard
                         title="Keyboard Quick Actions"
                         description="Powerful commands to help you create designs more efficiently."
+                        className="col-span-2 col-start-2"
                     >
                         <div className="aspect-video flex justify-center items-center gap-4">
                             <Key className="w-28">Shift</Key>
@@ -93,16 +98,18 @@ export default function Features() {
                     </FeatureCard>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-8 flex flex-wrap gap-3 justify-center items-center">
                     {features.map((feature) => (
                         <div
-                            className="bg-neutral-900 border border-white/10 inline-flex px-3 py-1.5 rounded-2xl"
+                            className="bg-neutral-900 border border-white/10 inline-flex  px-3 md:px-5 md:py-2 py-1.5 rounded-2xl gap-3 items-center"
                             key={feature}
                         >
-                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center">
+                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl">
                                 &#10038;
                             </span>
-                            <span>{feature}</span>
+                            <span className="font-medium md:text-lg">
+                                {feature}
+                            </span>
                         </div>
                     ))}
                 </div>

@@ -24,15 +24,15 @@ export default function Features() {
                 <div className="flex justify-center">
                     <Tag>Features</Tag>
                 </div>
-                <h2 className="text-6xl font-medium text-center mt-6">
+                <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
                     Where powers meet{" "}
                     <span className="text-lime-400">Simplicity</span>{" "}
                 </h2>
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-3 gap-8">
                     <FeatureCard
                         title="Real-Time Collaboration"
                         description="Work together seamlessly with conflict-free team editing."
-                        className="col-span-2"
+                        className="md:col-span-2 lg:col-span-1"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className="z-40">
@@ -68,11 +68,11 @@ export default function Features() {
                             </Avatar>
                         </div>
                     </FeatureCard>
-                    
+
                     <FeatureCard
                         title="Interactive Prototyping"
                         description="Engage your clients with prototypes that react to user actions."
-                        className="col-span-2"
+                        className="md:col-span-2 lg:col-span-1"
                     >
                         <div className="aspect-video flex justify-center items-center">
                             <p className="text-4xl font-extrabold text-white/20 text-center">
@@ -84,11 +84,11 @@ export default function Features() {
                             </p>
                         </div>
                     </FeatureCard>
-                    
+
                     <FeatureCard
                         title="Keyboard Quick Actions"
                         description="Powerful commands to help you create designs more efficiently."
-                        className="col-span-2 col-start-2"
+                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto"
                     >
                         <div className="aspect-video flex justify-center items-center gap-4">
                             <Key className="w-28">Shift</Key>
@@ -101,7 +101,7 @@ export default function Features() {
                 <div className="mt-8 flex flex-wrap gap-3 justify-center items-center">
                     {features.map((feature) => (
                         <div
-                            className="bg-neutral-900 border border-white/10 inline-flex  px-3 md:px-5 md:py-2 py-1.5 rounded-2xl gap-3 items-center"
+                            className="bg-neutral-900 border border-white/10 inline-flex px-3 py-1.5 md:px-5 md:py-2 rounded-2xl gap-3 items-center"
                             key={feature}
                         >
                             <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex items-center justify-center text-xl">

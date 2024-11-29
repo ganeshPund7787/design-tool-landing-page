@@ -25,9 +25,6 @@ export default function IntegrationColumn(props: {
                 repeat: Infinity,
                 ease: "linear",
             }}
-            whileHover={{
-                y: 0,
-            }}
             className={twMerge("flex flex-col gap-4 pb-4", className)}
         >
             {Array.from({ length: 2 }).map(() => (

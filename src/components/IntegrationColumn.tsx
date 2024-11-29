@@ -30,8 +30,8 @@ export default function IntegrationColumn(props: {
             }}
             className={twMerge("flex flex-col gap-4 pb-4", className)}
         >
-            {Array.from({ length: 2 }).map((_, i) => (
-                <Fragment>
+            {Array.from({ length: 2 }).map(() => (
+                <Fragment key={Math.random() + 1}>
                     {integrations.map((integration) => (
                         <div
                             className="bg-neutral-900 border border-white/10 rounded-3xl p-6"

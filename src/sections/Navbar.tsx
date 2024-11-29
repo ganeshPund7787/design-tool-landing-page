@@ -107,8 +107,12 @@ export default function Navbar() {
                                     className="overflow-hidden"
                                 >
                                     <div className="flex flex-col items-center gap-4 py-4">
-                                        {navLinks.map((link) => (
-                                            <a href={link.href} className="">
+                                        {navLinks.map((link, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={link.href}
+                                                className=""
+                                            >
                                                 {link.label}
                                             </a>
                                         ))}
